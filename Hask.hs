@@ -93,5 +93,9 @@ reverseList []  = []
 reverseList [x] = [x]
 reverseList xs  = (last xs):(reverseList (init xs))
 
-
+fib' :: Int -> Int -> Int -> Int
+fib' x x' 1 = x
+fib' x x' 2 = x'
+fib' x x' idx =
+  fib x' (x + x') (pred idx)
 
